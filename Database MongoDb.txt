@@ -1,0 +1,42 @@
+//Must Be Prepared The Database Start
+const express = require('express');
+const cors = require('cors');
+const jwt = require('jsonwebtoken');
+require('dotenv').config();
+const { MongoClient, ServerApiVersion, ObjectId } = require('mongodb');
+const res = require('express/lib/response');
+const app = express();
+const port = process.env.PORT || 5000;
+app.use(cors());
+app.use(express.json());
+// const uri = `mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASS}@cluster0.vpofv.mongodb.net/?retryWrites=true&w=majority`;
+// const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 });
+//Must Be Prepared The Database END
+
+async function run(){
+    try{
+        // await client.connect();
+        // const productCollection = client.db('KinbaNaki').collection('products');
+
+        // //Get All Product Start
+        // app.get('/products', async(req,res)=>{
+        //     const query ={};
+        //     const products = await productCollection.find(query).toArray();
+        //     res.send(products);
+        // })
+        // //Get All Product End
+
+
+	
+    }
+    finally{
+
+    }
+}
+run().catch(console.dir);
+app.get('/',(req,res)=>{
+    res.send('Hello From RH consultaion');
+});
+app.listen(port,()=>{
+    console.log(`RH consultaion App Listening on Port ${port}`);
+})
